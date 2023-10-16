@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-inter leading-relaxed;
+  }
+}
+
+@layer components {
+  .title_btn {
+    @apply bg-white hover:bg-primary transition duration-300 ease-in-out  text-slate-800 hover:text-white font-medium leading-tight px-4 py-2 rounded-full flex items-center gap-2 text-sm;
+  }
+
+  .skills_tag {
+    @apply px-3 py-1 rounded-full text-xs text-slate-700 font-medium bg-slate-100 leading-tight inline-flex items-center border border-primary/25;
+  }
+
+  .card_primary {
+    @apply bg-white/5 p-5 md:p-8 rounded-2xl border border-slate-300/10 backdrop-blur shadow-md;
+  }
+
+  .nav_link_active .nav_indicator {
+    @apply w-16 bg-primary;
+  }
+  .nav_link_active .nav_text {
+    @apply text-slate-100;
+  }
+  .product_details_content > p + p {
+    @apply mt-3;
+  }
+
+  .product_details_content h1,
+  .product_details_content h2,
+  .product_details_content h3 {
+    @apply text-xl lg:text-2xl font-medium mt-4 mb-2;
+  }
+  .product_details_content img {
+    @apply max-w-full h-auto my-3 rounded block;
+  }
+}
